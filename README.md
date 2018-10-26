@@ -15,6 +15,7 @@ ours.
 
 Here's what our pseudocode looks like:
 
+```text
 ### Identify the problem
 
 We want to find the arithmetic average.
@@ -35,7 +36,6 @@ inputs divided by their count
 
 ### Define the procedure’s implementation
 
-```text
       local var: running total
       local var: count
       For each element
