@@ -36,11 +36,11 @@ inputs divided by their count
 
 ### Define the procedure’s implementation
 
-      local var: running total
-      local var: count
-      For each element
-        accumulate its value to running total AND
-        add a tick to count
+  local var: running total
+  local var: count
+  For each element
+    accumulate its value to running total AND
+    add a tick to count
   return running total / count
 ```
 
