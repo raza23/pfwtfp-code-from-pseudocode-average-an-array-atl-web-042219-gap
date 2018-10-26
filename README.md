@@ -80,9 +80,8 @@ def average_collection_of_numbers(array_of_numbers, number_count)
 end
 ```
 
-However this is not typical Ruby style and it'd be surprising, from an
-experienced Rubyist to see code like this. We'd expect it to look more like:
-
+However this is not typical Ruby style. It's a bit over-verbose. Most
+Ruby developers would expect this to be written closer to the following:
 
 ```ruby
 def average_numbers(collection)
