@@ -52,8 +52,8 @@ Let's get started. The first two activities of the Flatiron Process are not
 going to be much help to us in this part of development: "Identify the Problem"
 and "Identify the Output." These two steps are used to make sure we're solving
 the right problem. They will actually be used at the end, _after_ coding, to
-make sure we coded the right _Procedure_ and that it does what planned on it
-doing. We'll check on them at the end.
+make sure we coded the right _Procedure_ and that it does what we planned.
+We'll check on them at the end.
 
 ### Step 3: Name the _Procedure_
 
