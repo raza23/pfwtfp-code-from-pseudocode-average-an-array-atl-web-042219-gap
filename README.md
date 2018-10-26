@@ -15,65 +15,34 @@ ours.
 
 Here's what our pseudocode looks like:
 
-<article id="identify_the_problem">
-  <header>
-    <h1>Identify the problem</h1>
-  </header>
-  <section>
-    <p class="response">
-    We want to find the arithmetic average.
-    </p>
-  </section>
-</article>
-<article id="identify_the_output">
-  <header>
-    <h2>Identify the output that would solve the problem</h2>
-  </header>
-  <section>
-    <p class="response">
-    Using the definition of average, calculate the mean defined as the sum
-    of the inputs divided by their count
-    </p>
-  </section>
-</article>
-<article id="name_the_procedure">
-  <header>
-    <h2>Name the procedure that fixes the problem</h2>
-  </header>
-  <section>
-    <p class="response">
-    average_collection_of_numbers
-    </p>
-  </section>
-</article>
-<article id="identify_what_inputs">
-  <header>
-    <h2>Identify what inputs are needed to create the output</h2>
-  </header>
-  <section>
-    <p class="response">
-      <li>Array of numbers</li>
-      <li>Count of the numbers</li>
-    </p>
-  </section>
-</article>
-<article id="define_the_procedure">
-  <header>
-    <h2>Define the procedure’s implementation</h2>
-  </header>
-  <section>
-    <!-- You might want to wrap your response in <pre> tags -->
-    <p class="response">
-    <pre>
+### Identify the problem
+
+We want to find the arithmetic average.
+
+### Identify the output that would solve the problem
+
+Using the definition of average, calculate the mean defined as the sum of the
+inputs divided by their count
+
+### Name the procedure that fixes the problem
+
+`average_collection_of_numbers`
+
+### Identify what inputs are needed to create the output
+
+* Array of numbers
+* Count of the numbers
+
+### Define the procedure’s implementation
+
+```text
       local var: running total
       local var: count
       For each element
         accumulate its value to running total AND
         add a tick to count
-      return running total / count
-    </p>
-  </section>
-</article>
+  return running total / count
+```
 
 ## Create Code from Pseudocode
 
@@ -176,9 +145,12 @@ collection = [1,2,3]
 average_numbers(collection)
 ```
 
+Other users of your code appreciate having to do the least amount of work
+possible. When you can calculate information for them, do so.
+
 ### Step 5: Define the Procedure
 
-Our final step, which, dangerously, is where many coders leap to _first_ is
+The final step, which, dangerously, is where many coders leap to _first_, is
 the implementation. Let's take the pseudocode and put it inside of our method
 that's under progress.
 
@@ -237,33 +209,23 @@ def average_numbers(collection)
 end
 ```
 
-> **Stretch**: If you're comfortable with this code, an experienced Rubyist
-> would probably write this method as:
-
-```ruby
-def average_numbers(collection)
-  collection.reduce(:&+) / collection.count
-end
-```
-
-Amazingly, if you explore this code, it performs the _exact same_ pseudocode as
-what we wrote earlier. Provided your _logic_, captured in psuedocode, is
-correct, it's easy to swap out _implementations_ to more powerful magic as you
-grow in experience!
-
 ### Verify the Code!
 
 Test the code with `collection` set to `[1,2,3]` and we'll see our code works!
+Double check the work we did in Steps 1 and 2: we're delivering the right
+output and that output solves the problem.
 
 ### Lab
 
-...But the code has a bug. It's always worth testing the code with non-obvious
-test data. `[1,2,3]`. We should always test our methods with some complex data
-once we get the basic case working.
+...But the code is not yet done. If we test our method with a few more
+complicated inputs, some things go wrong. Even the best pseudocoding might
+_still_ not catch all of the error cases! Fortunately, with clearly written,
+well-pseudocoded code and a debugging methodology like the Triangle process,
+we can take care of this work in no time.
 
-We've given you the code above as a starting point. Use the Triangle Process to
-isolate the bug, fix the code, and move on!
-
+We've given you the code above as a starting point. Add the code into
+`lib/average.rb`. Then use the Triangle Process and the `learn` command to
+isolate the bugs, fix the code, and move on!
 
 ## Conclusion
 
