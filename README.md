@@ -89,30 +89,30 @@ def average_numbers(collection)
 end
 ```
 
-Some taste and experience decisions are shown in how we did this that we would
-like to discuss with you.
+Some taste and experience decisions are shown in here, so we'll touch on them
+briefly.
 
 #### Why not `array_of_numbers`?
 
 We said in our pseudocode that we needed a collection, or `Array` of numbers.
 Why not reflect that in the name of the input?
 
-It's a good question. In some languages we would have so specify that the thing
-coming in was an `Array` of `Integer` or `Float`. Ruby doesn't require that
-from us (although future versions might soon!). Ruby doesn't require this and a
+It's a good question. In some languages we would have so specify that the
+input was an `Array` of `Integer` or `Float`. Ruby doesn't require that
+from us ([future versions might][ts ruby]). Ruby doesn't require this and a
 great host of bugs have arisen because of it. Many smart people have come to
 think that *not* requiring us to specify what type we expected has been a Bad
 Idea.
+
+[ts ruby]: http://codon.com/consider-static-typing
 
 Given all that, why wouldn't we document, in the most visible possible way,
 that we expect an `array_of_numbers`? Well, it's simply not the style in which
 Ruby is written. Ruby style suggests that when you add an `s` which makes a
 variable name plural, you're signaling to readers that you mean to take a
-collection of some sort (usually an `Array`) and _that_ is sufficient. There
-*are* other collections which are interchangeable with `Array`s (we won't cover
-them here, but you can learn more about them in the Resources section, below).
+collection of some sort (usually an `Array`) and _that_ is sufficient.
 
-Furthermore we can restructure the name of the method and the arguments to
+We can restructure the name of the method and the arguments to
 contain essentially the same information, but less verbosely:
 
 
@@ -122,14 +122,14 @@ def average_numbers(collection)
 
 #### Why Did you Drop the `number_count`
 
-While pseudocoding, it helps to know that our method  depends on knowing on the
-count of numbers in our collection. However, this programming language, Ruby,
-has an awesome built-in command for finding the number of members in a
-collection called `count`. Is there any way that the information we expect to
+While pseudocoding, it helps to know that our method depends on knowing on the
+count of numbers in our collection. However, this _particular_ programming language, Ruby,
+has an awesome built-in command for finding the number of members in an
+`Array` called `count`. Is there any way that the information we expect to
 be passed in would be _different_ from what Ruby calculated? The answer is
 clearly "no." So, we can _hide_ that complexity.
 
-Would you rather write (and which is less error-prone?):
+From:
 
 ```ruby
 collection = [1,2,3]
@@ -137,7 +137,7 @@ collection_length = collection.count
 average_numbers(collection, collection_length)
 ```
 
-or:
+to:
 
 ```ruby
 collection = [1,2,3]
@@ -165,7 +165,7 @@ def average_numbers(collection)
 end
 ```
 
-First, we'll translate the local variables. We'll define `running_total` and
+First, we'll translate the local variable `running_total`. Next, we'll
 drop the local variable `count` because that's been calculated already. We can
 also remove the pseudocode line where we add to `count`.
 
@@ -179,8 +179,8 @@ def average_numbers(collection)
 end
 ```
 
-Next, let's activate our return statement. Ruby automatically "returns" the
-last line of code, so it's unusual to see a `return` statement as the last line
+Next, let's uncomment our `return` statement. Ruby automatically "returns" the
+last line of code, so it's unusual to see the `return` word beginning the last line
 of a method in Ruby. The code would look like this.
 
 ```ruby
@@ -210,21 +210,35 @@ end
 
 ### Verify the Code!
 
-Test the code with `collection` set to `[1,2,3]` and we'll see our code works!
-Double check the work we did in Steps 1 and 2: we're delivering the right
-output and that output solves the problem.
+Test the code with `collection` set to `[1,2,3]` and prove to yourself that our code works!
+
+Double check the work we did in Steps 1 and 2:
+
+```text
+### Identify the problem
+
+We want to find the arithmetic average.
+
+### Identify the output that would solve the problem
+
+Using the definition of average, calculate the mean defined as the sum of the
+inputs divided by their count
+```
+
+If the code meets the "problem" the code "works." Good job!
 
 ### Lab
 
-...But the code is not yet done. If we test our method with a few more
+...But the code is _still_ not yet done. If we test our method with a few more
 complicated inputs, some things go wrong. Even the best pseudocoding might
 _still_ not catch all of the error cases! Fortunately, with clearly written,
 well-pseudocoded code and a debugging methodology like the Triangle process,
 we can take care of this work in no time.
 
-We've given you the code above as a starting point. Add the code into
-`lib/average.rb`. Then use the Triangle Process and the `learn` command to
-isolate the bugs, fix the code, and move on!
+We've given you the code above as a starting point. Add the provided code into
+`lib/average.rb`. Use the `learn` command to find out what's still broken. Then
+use the Triangle Process to isolate the bugs. Fix the code, get the tests
+passing, and move on!
 
 ## Conclusion
 
