@@ -110,7 +110,9 @@ Given all that, why wouldn't we document, in the most visible possible way,
 that we expect an `array_of_numbers`? Well, it's simply not the style in which
 Ruby is written. Ruby style suggests that when you add an `s` which makes a
 variable name plural, you're signaling to readers that you mean to take a
-collection of some sort (usually an `Array`) and _that_ is sufficient.
+collection of some sort (usually an `Array`) and _that_ is sufficient. When
+translating pseudocode, you'll need to keep in mind the language's community's
+standards of practice. Honor the conventions of the community, when possible.
 
 We can restructure the name of the method and the arguments to
 contain essentially the same information, but less verbosely:
@@ -253,5 +255,3 @@ to use a process like this as you tackle more advanced problems. Averaging a
 collection is a well-understood and well-defined problem. Other problems like
 `show_video_that_matches_search_request` is a lot harder, **but** crumbles
 before dedicated use of our process.
-
-## Resources
