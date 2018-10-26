@@ -229,4 +229,16 @@ isolate the bugs, fix the code, and move on!
 
 ## Conclusion
 
+This lesson represents the end of a lot of work trying to be more focused and
+mindful of how we create our methods. This process, when followed carefully,
+will help you consistently generate good code: code that is readable and code
+that produces the correct output.
+
+By fusing pieces of good code with other pieces of good code, we can tackle
+daunting problems with code that isn't painful to work with. Good work! Be sure
+to use a process like this as you tackle more advanced problems. Averaging a
+collection is a well-understood and well-defined problem. Other problems like
+`show_video_that_matches_search_request` is a lot harder, **but** crumbles
+before dedicated use of our process.
+
 ## Resources
