@@ -52,12 +52,12 @@ Let's get started. The first two activities of the Flatiron Process are not
 going to be much help to us in this part of development: "Identify the Problem"
 and "Identify the Output." These two steps are used to make sure we're solving
 the right problem. They will actually be used at the end, _after_ coding, to
-make sure we coded the right Procedure and that it does what planned on it
+make sure we coded the right _Procedure_ and that it does what planned on it
 doing. We'll check on them at the end.
 
-### Step 3: Name the Procedure
+### Step 3: Name the _Procedure_
 
-We **do** however, want to pick up with "Step 3: Name the Procedure." In our
+We **do** however, want to pick up with "Step 3: Name the _Procedure_." In our
 code buffer, we'll define the method as Ruby requires:
 
 ```ruby
@@ -148,7 +148,7 @@ average_numbers(collection)
 Other users of your code appreciate having to do the least amount of work
 possible. When you can calculate information for them, do so.
 
-### Step 5: Define the Procedure
+### Step 5: Define the _Procedure_
 
 The final step, which, dangerously, is where many coders leap to _first_, is
 the implementation. Let's take the pseudocode and put it inside of our method
